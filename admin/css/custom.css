@@ -1,0 +1,391 @@
+body {
+	padding-bottom: 30px;
+	padding-top: 50px;
+	font-size:12px;
+}
+
+h1 {
+	font-size:1.3em;
+	font-weight:bold;
+	margin:10px 0 5px;
+}
+
+.page-header {
+	margin:20px 0 10px;
+}
+
+.btn-row {
+	border-bottom: 1px solid #eee;
+	margin:10px 0;
+	padding-bottom: 9px;
+	text-align:right;
+}
+
+.row-data
+{
+	padding:0 15px;
+}
+
+.navbar-brand {
+	padding-left:50px;
+	background: url(../img/icon_inactive.png) no-repeat left center;
+}
+
+.navbar-brand:hover {
+	background-image: url(../img/icon_active.png);
+}
+
+#tabdata a {
+	outline: none;
+}
+
+#mainbox {
+	margin: 10px 20px;
+}
+
+.langfields {
+	padding:20px;
+	border:1px solid #ddd;
+	border-top: none;
+}
+
+.buttonsBox {
+	margin:15px 0 0;
+	text-align: center;
+}
+
+.tbl_data {
+	width: 100%;
+	border:none;
+	border-collapse: collapse;
+	margin: 15px 0;
+}
+
+.tbl_data th {
+	padding: 10px;
+	border:1px solid #fff;
+	text-align: center;
+	background:#aeaeae;
+}
+
+.tbl_data td {
+	padding: 10px;
+	border:1px solid #aeaeae;
+}
+
+.data_actions {
+	width:250px;
+}
+
+.data_actions .btn {
+	margin-left: 5px;
+}
+
+.gallery_actions {
+	width:300px;
+}
+
+/* file upload */
+.box
+{
+	font-size: 1.25rem; /* 20 */
+	background-color: #c8dadf;
+	position: relative;
+	padding: 50px 20px;
+}
+.box.has-advanced-upload
+{
+	outline: 2px dashed #92b0b3;
+	outline-offset: -10px;
+
+	-webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+	transition: outline-offset .15s ease-in-out, background-color .15s linear;
+}
+.box.is-dragover
+{
+	outline-offset: -20px;
+	outline-color: #c8dadf;
+	background-color: #fff;
+}
+.box__dragndrop,
+.box__icon
+{
+	display: none;
+}
+.box.has-advanced-upload .box__dragndrop
+{
+	display: inline;
+}
+.box.has-advanced-upload .box__icon
+{
+	width: 100%;
+	height: 80px;
+	fill: #92b0b3;
+	display: block;
+	margin-bottom: 40px;
+}
+
+.box__input {
+	text-align: center;
+}
+
+.box.is-uploading .box__input,
+.box.is-success .box__input,
+.box.is-error .box__input
+{
+	visibility: hidden;
+	text-align: center;
+}
+
+.box__uploading,
+.box__success,
+.box__error
+{
+	display: none;
+}
+.box.is-uploading .box__uploading,
+.box.is-success .box__success,
+.box.is-error .box__error
+{
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+
+	-webkit-transform: translateY( -50% );
+	transform: translateY( -50% );
+}
+.box__uploading
+{
+	font-style: italic;
+}
+.box__success
+{
+	-webkit-animation: appear-from-inside .25s ease-in-out;
+	animation: appear-from-inside .25s ease-in-out;
+}
+@-webkit-keyframes appear-from-inside
+{
+	from	{ -webkit-transform: translateY( -50% ) scale( 0 ); }
+	75%		{ -webkit-transform: translateY( -50% ) scale( 1.1 ); }
+	to		{ -webkit-transform: translateY( -50% ) scale( 1 ); }
+}
+@keyframes appear-from-inside
+{
+	from	{ transform: translateY( -50% ) scale( 0 ); }
+	75%		{ transform: translateY( -50% ) scale( 1.1 ); }
+	to		{ transform: translateY( -50% ) scale( 1 ); }
+}
+
+.box__restart
+{
+	font-weight: 700;
+}
+.box__restart:focus,
+.box__restart:hover
+{
+	color: #39bfd3;
+}
+
+.box__file
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.box__file + label
+{
+	max-width: 80%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	font-size: 16px;
+}
+.box__file + label:hover strong,
+.box__file:focus + label strong,
+.box__file.has-focus + label strong
+{
+	color: #39bfd3;
+}
+.box__file:focus + label,
+.box__file.has-focus + label
+{
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.box__file + label *
+{
+	/* pointer-events: none; */ /* in case of FastClick lib use */
+}
+
+.box__button
+{
+	font-weight: 700;
+	color: #e5edf1;
+	background-color: #39bfd3;
+	display: block;
+	padding: 8px 16px;
+	margin: 40px auto 0;
+	border: none;
+}
+.box__button:hover,
+.box__button:focus
+{
+	background-color: #0f3c4b;
+}
+
+.box__images {
+	position: relative;
+}
+
+#images_to_upload {
+	margin:10px 0;
+}
+
+#images_to_upload img {
+	display: block;
+}
+
+#images_to_upload span {
+	display: inline-block;
+	margin:5px;
+	position:relative;
+}
+
+#images_to_upload span.imageToLoad:before {
+	content: "";
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height: 100%;
+	background: url(../img/loading.png) no-repeat center;
+}
+
+.specList {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.specItem {
+	width:350px;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	margin:0 10px;
+	padding:5px;
+	cursor: pointer;
+}
+
+.specPhoto {
+	width:150px;
+}
+
+.specName {
+	font-size:16px;
+	color:#444;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.specItem.active .specName {
+	color:#fff;
+}
+.specItem.active {
+	background: #00529B;
+}
+.specVisitBox {
+	width:750px;
+	margin:20px auto;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+}
+
+#addedDatesBlock {
+	display:block;
+}
+
+.appointmentWeek {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.addedDateBox {
+	width: 150px;
+	margin:10px;
+	padding:10px;
+	border:1px solid #acacac;
+}
+
+.addedDateTitle {
+	padding:10px 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+.copyWeek {
+	align-self: center;
+}
+
+
+#managers_permissions {
+	border-collapse: collapse;
+	margin:15px;
+}
+
+#managers_permissions th, #managers_permissions td {
+	padding:10px;
+	border:1px solid #cacaca;
+}
+
+.alertBox {
+	position:fixed;
+	top:65px;
+	left:0;
+	width:500px;
+	display: none;
+}
+
+.separated_block {
+	margin: 30px 20px;
+	padding:0px;
+	border:1px solid #acacac;
+	position: relative;
+}
+
+.separated_block_title {
+	position: absolute;
+	top:-15px;
+	left:40px;
+	background: #fff;
+	padding:5px 10px;
+	font:bold italic 14px/1.2em Arial, sans-serif;
+}
+
+.separated_block_data {
+	padding:20px;
+}
+
+.schedule_table {
+	border-collapse: collapse;
+	margin:10px 0 0;
+}
+
+.schedule_table th, .schedule_table td {
+	border:1px solid #afafaf;
+	padding:6px 10px;
+	text-align: center;
+	font-size: 14px;
+}

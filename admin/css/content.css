@@ -1,0 +1,35 @@
+body {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size:18px;
+	line-height:30px;
+	color: #333;
+	background:#fafafa;
+	margin:0;
+	padding:10px;
+	font-weight: 300;
+}
+
+header, article, footer {display: block; position: relative}
+
+a {
+	color:#009b40;
+	text-decoration:none;
+}
+
+h2 {
+    color: #009b40;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+#pricelist td {
+	padding: 5px;
+}
+
+#pricelist tr:nth-child(2n) td {
+	background: #f0f0f0;
+}

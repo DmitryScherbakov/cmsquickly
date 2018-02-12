@@ -1,0 +1,25 @@
+AddDefaultCharset UTF-8
+Options All -Indexes
+#Options +FollowSymLinks
+
+#<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+#Header set Cache-Control "max-age=2592000"
+#</FilesMatch>
+
+#  mod_rewrite in use
+RewriteEngine On
+
+#security rules
+RewriteRule lib/ - [F,L]
+RewriteRule components/ - [F,L]
+RewriteRule templates/ - [F,L]
+RewriteRule tmp/ - [F,L]
+RewriteRule lang/ - [F,L]
+RewriteRule cache/ - [F,L]
+
+#redirect to index
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$  [NC]
+RewriteRule (.*) index.php
